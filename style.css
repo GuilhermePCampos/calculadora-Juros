@@ -57,3 +57,42 @@
   flex-direction: column;
   width: 100%;
 }
+
+.input-field label{
+  font-size: 15px;
+  columns: var(--color-text);
+  font-weight: 500;
+}
+
+.input-field input {
+  font-size: 16px;
+  background-color: transparent;
+  color: #fff;
+  border: none;
+  border-bottom: 1px solid #4c1d95;
+  padding: 5px;
+}
+
+.input-field input:focus {
+  outline: none;
+}
+
+#result {
+  text-align: center;
+}
+
+#total {
+  font-size: 40px;
+}
+
+#calculate {
+  background: linear-gradient(var(--linear-gradient));
+  border: none;
+  padding: 10px;
+  color: #fff;
+  font-size: 18px;
+  font-weight: bold;
+  border-radius: 4px;
+  cursor: pointer;
+}
+  
