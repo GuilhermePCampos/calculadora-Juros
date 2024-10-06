@@ -2,11 +2,7 @@
 
 :root {
   --linear-gradient: 90deg, #38bdf8, #6d28d9, #4c1d95;
-  --bg-main: #0d6cf9d8;
-  --bg-detail: #e506f5da;
-  --bg-detailbkp: #ff25ffda;
-  --bg-detailRef: #ff2525da;
-  --bg-mainRef: #ffe53bd8;
+  --color-text: #dfe3ea;
 }
 
 * {
@@ -23,5 +19,41 @@
   align-items: center;
   justify-content: center;
   background: linear-gradient(var(--linear-gradient));
-  color: #dfe3ea;
+  color: var(--color-text);
+}
+
+#calculator {
+  background-color: #262626;
+  padding: 40px;
+  border-radius: 8px;
+  box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.32);
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+
+#calculator h2 {
+  font-size: 30px;
+  position: relative;
+}
+
+#calculator h2::before {
+  position: absolute;
+  content: '';
+  height: 2px;
+  width: 150px;
+  background: linear-gradient(var(--linear-gradient));
+  bottom: 5px;
+}
+
+#input_box {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+
+.input-field {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
 }
