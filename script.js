@@ -18,9 +18,18 @@ function jurosSimples() {
     return Number(value) + juros;
 }
 
-document.getElementById("calculate").addEventListener("click", function(){
+function CalcularJuros() {
     const feeTypeSelected = document.querySelector('#feeType input[name="radioFee"]:checked').value;  
     const total = feeTypeSelected == 0 ? jurosSimples() : jurosCompostos();
-    eTotal.innerHTML = ("R$" + total.toFixed(2).replace(".", ","));
+    eTotal.textContent = ("R$" + total.toFixed(2).replace(".", ","));
+    // eTotal.innerHTML = ("R$" + total.toFixed(2).replace(".", ","));
     // // eTotal.innerHTML = ("R$" + jurosCompostos().toFixed(2).replace(".", ","));
+}
+
+document.getElementById("calculate").addEventListener("click", CalcularJuros);
+feeType.forEach(element => {
+    element.addEventListener("click", CalcularJuros);
 });
+
+
+

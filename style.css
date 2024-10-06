@@ -77,6 +77,19 @@
   outline: none;
 }
 
+#feeType {
+  /* background-color: red; */
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  
+}
+
+#feeType span {
+  padding-left: 5px;
+  font-size: 14px;
+}
+
 #result {
   text-align: center;
 }
